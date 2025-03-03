@@ -15,12 +15,18 @@ import { fetchPies } from '../redux/slices/piesSlice';
 import { AppDispatch, RootState } from '../redux/store';
 import { PieBlokProps } from '../redux/slices/types';
 
-function Home() : React.ReactElement{
-  const dispatch = useDispatch <AppDispatch>();
-  const categoryId = useSelector((state: RootState) => state.filters.categoryId);
+function Home(): React.ReactElement {
+  const dispatch = useDispatch<AppDispatch>();
+  const categoryId = useSelector(
+    (state: RootState) => state.filters.categoryId
+  );
   const sortType = useSelector((state: RootState) => state.filters.sortType);
-  const searchValue = useSelector((state: RootState) => state.filters.searchValue);
-  const currentPage = useSelector((state: RootState) => state.filters.currentPage);
+  const searchValue = useSelector(
+    (state: RootState) => state.filters.searchValue
+  );
+  const currentPage = useSelector(
+    (state: RootState) => state.filters.currentPage
+  );
   const pies = useSelector((state: RootState) => state.pies.items);
   const isLoading = useSelector((state: RootState) => state.pies.loading);
 
@@ -54,7 +60,9 @@ function Home() : React.ReactElement{
   const skeletons = [...new Array(6)].map((_, index) => (
     <Skeleton key={index} />
   ));
-  const items = pies.map((pie:PieBlokProps) => <PieBlok key={pie.id}  {...pie} />);
+  const items = pies.map((pie: PieBlokProps) => (
+    <PieBlok key={pie.id} {...pie} />
+  ));
 
   return (
     <div className="container">
@@ -86,4 +94,3 @@ function Home() : React.ReactElement{
   );
 }
 export default Home;
-

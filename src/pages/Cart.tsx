@@ -8,18 +8,19 @@ import CartEmpty from '../components/CartEmpty';
 import { RootState } from '../redux/store';
 
 function Cart(): React.ReactElement {
-
   const dispatch = useDispatch();
-  const {items, totalPrice} = useSelector((state: RootState)=> state.cart);
-  const totalCount = items.reduce((sum: number, item: any)=> sum + item.count, 0);
+  const { items, totalPrice } = useSelector((state: RootState) => state.cart);
+  const totalCount = items.reduce(
+    (sum: number, item: any) => sum + item.count,
+    0
+  );
 
+  const onClickClear = () => {
+    dispatch(clearItem());
+  };
 
-  const onClickClear= ()=>{
-    dispatch(clearItem())
-  }
-
-  if(!totalPrice){
-    return <CartEmpty/>
+  if (!totalPrice) {
+    return <CartEmpty />;
   }
   return (
     <div className="container container--cart">
@@ -99,11 +100,9 @@ function Cart(): React.ReactElement {
           </div>
         </div>
         <div className="content__items">
-          {
-            items.map(items =>(
-              <CartItem key ={items.id} {...items}/>
-            ))
-          }
+          {items.map((items) => (
+            <CartItem key={items.id} {...items} />
+          ))}
         </div>
         <div className="cart__bottom">
           <div className="cart__bottom-details">
@@ -117,7 +116,10 @@ function Cart(): React.ReactElement {
             </span>
           </div>
           <div className="cart__bottom-buttons">
-            <Link to="/" className="button button--outline button--add go-back-btn">
+            <Link
+              to="/"
+              className="button button--outline button--add go-back-btn"
+            >
               <svg
                 width="8"
                 height="14"
@@ -134,7 +136,7 @@ function Cart(): React.ReactElement {
                 />
               </svg>
 
-              <span >Повернутися назад</span>
+              <span>Повернутися назад</span>
             </Link>
             <div className="button pay-btn">
               <span>Замовити</span>

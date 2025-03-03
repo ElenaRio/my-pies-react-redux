@@ -3,12 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addItem } from '../../redux/slices/cartSlice';
 import { Link } from 'react-router-dom';
 
-import { RootState } from '../../redux/store'; 
+import { RootState } from '../../redux/store';
 import { CartItemProps, PieBlokProps } from '../../redux/slices/types';
 
-
-const typeName= ['тонке', 'традиційне'];
-
+const typeName = ['тонке', 'традиційне'];
 
 function PieBlok({
   id,
@@ -19,8 +17,6 @@ function PieBlok({
   types,
   rating,
 }: PieBlokProps): React.ReactElement {
-
-
   const dispatch = useDispatch();
   // const cartItem = useSelector(state => state.cart.items.find((obj) => obj.id === id))
 

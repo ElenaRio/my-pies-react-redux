@@ -3,7 +3,6 @@ import { getCartFromLocalStorage } from '../../utils/getCartFromLocalStorage';
 import { calcTotalPrice } from '../../utils/calcTotalPrice';
 import { CartItemProps, CartStateProps } from './types';
 
-
 const cartData = getCartFromLocalStorage();
 
 const initialState: CartStateProps = {

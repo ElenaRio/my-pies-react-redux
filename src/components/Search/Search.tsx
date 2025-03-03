@@ -12,10 +12,9 @@ function Search(): React.ReactElement {
   const onClickClear = () => {
     dispatch(setSearchValue(''));
     setValue('');
-    if(inputRef.current){
+    if (inputRef.current) {
       inputRef.current.focus();
     }
-   
   };
   const updateSearchValue = React.useCallback(
     debounce((value: string) => {

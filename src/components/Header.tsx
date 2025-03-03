@@ -11,7 +11,6 @@ function Header() {
   const location = useLocation();
   const isMounted = React.useRef(false);
 
-  // локал сторич
   React.useEffect(() => {
     if (isMounted) {
       const json = JSON.stringify(items);

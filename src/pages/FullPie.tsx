@@ -26,7 +26,7 @@ function FullPie(): React.ReactElement {
     }
     fetchPie();
   }, [id, navigate]);
-  //  }, []); било так
+  
   if (!pie) {
     return <>Завантажую....</>;
   }
