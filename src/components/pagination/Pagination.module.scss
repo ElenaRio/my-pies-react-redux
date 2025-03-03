@@ -1,0 +1,43 @@
+.container{
+    text-align: center;
+}
+.root{
+   li{
+    display: inline-block;
+    
+   }
+   a{
+    display: inline-block;
+    color: #ef4f10;
+    text-align: center;
+    width: 45px;
+    height: 45px ;
+    padding: 10px;
+   
+    border: 1px solid #ef4f10;
+    border-radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease; 
+    @media (max-width: 400px){
+        width: 35px;
+        height: 35px ;
+        padding: 6px;
+    }
+    &:hover{
+        background-color: #ef4f10;
+        color: white;
+        
+    }
+
+   }
+   :global{
+    .selected{
+        a{
+            background-color: #ef4f10;
+            color: white;
+            
+        }
+    }
+   }
+}
