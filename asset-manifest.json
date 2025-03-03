@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/my-pies-react-redux/static/css/main.28fdf747.css",
-    "main.js": "/my-pies-react-redux/static/js/main.997f43dd.js",
+    "main.js": "/my-pies-react-redux/static/js/main.dae49b56.js",
     "static/media/h3y2_l8ga_210929.jpg": "/my-pies-react-redux/static/media/h3y2_l8ga_210929.7186eeb6f24d378d5490.jpg",
     "static/media/empty-cart.png": "/my-pies-react-redux/static/media/empty-cart.db905d1f4b063162f25b.png",
     "index.html": "/my-pies-react-redux/index.html",
     "main.28fdf747.css.map": "/my-pies-react-redux/static/css/main.28fdf747.css.map",
-    "main.997f43dd.js.map": "/my-pies-react-redux/static/js/main.997f43dd.js.map"
+    "main.dae49b56.js.map": "/my-pies-react-redux/static/js/main.dae49b56.js.map"
   },
   "entrypoints": [
     "static/css/main.28fdf747.css",
-    "static/js/main.997f43dd.js"
+    "static/js/main.dae49b56.js"
   ]
 }
